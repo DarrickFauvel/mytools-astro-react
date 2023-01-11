@@ -1,0 +1,45 @@
+---
+const { author, urlWebsite } = Astro.props
+---
+
+<footer class='footer'>
+  <div class='container'>
+    <p class='author'>Created by {author}</p>
+    <a class='footer__link' href={urlWebsite} target='_blank'>
+      darrickdevelops.com
+    </a>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    bottom: 0;
+    /* height: calc((50 / 16) * 1em); */
+    box-shadow: 0 -1px 3px gray;
+    line-height: 1.1;
+    padding-block: 0.5em;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    /* height: 100%; */
+  }
+
+  .author {
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+
+  .footer__list {
+    display: flex;
+    gap: 1.5em;
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer__link {
+    text-decoration: none;
+    font-size: 0.75rem;
+  }
+</style>

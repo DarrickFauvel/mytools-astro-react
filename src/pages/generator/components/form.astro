@@ -1,0 +1,74 @@
+---
+const handleSubmit = (e) => {
+  e.preventDefault()
+  // if (!textInput) {
+  //   return
+  // }
+  // setState((prevState) => ({
+  //   ...prevState,
+  //   barcodeValue: state.textInput
+  // }))
+}
+---
+
+<form id='form'>
+  <!-- <form id='form' onSubmit={handleSubmit}> -->
+  <div class='control-group'>
+    <input
+      type='text'
+      id='textInput'
+      name='textInput'
+      placeholder='Enter location identifier...'
+      autocomplete='off'
+    />
+    <!-- <input
+      type='text'
+      id='textInput'
+      name='textInput'
+      value={state.textInput}
+      onChange={handleChange}
+      placeholder='Enter location identifier...'
+      autoComplete='off'
+    /> -->
+    <label for='textInput'>
+      <span>example:</span> 01A035M02, 99B106A05, etc.
+    </label>
+  </div>
+  <button class='btn' type='submit'> GENERATE</button>
+</form>
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+  }
+
+  label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.2em;
+    color: darkgray;
+    font-size: 0.8rem;
+  }
+
+  label span {
+    display: inline-block;
+    padding-bottom: 2px;
+    font-size: 0.7rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid var(--color-gray-136);
+    border-radius: 5px;
+  }
+</style>
